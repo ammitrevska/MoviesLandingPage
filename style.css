@@ -30,7 +30,9 @@ img {
     }
 
     .carousel-item.movie{
-        display: block;
+        /* display: block; */
+        display: flex;
+        align-items: stretch;
         margin-right: 0;
         flex: 0 0 calc(100%/3.4);
     }
