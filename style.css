@@ -1,0 +1,67 @@
+.navbar {
+    z-index: 1000;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; 
+}
+
+.carousel-caption {
+    bottom: 1rem;
+    left: 10%;
+    text-align: start;
+    max-width: 50%;
+}
+
+.btn{
+    color: white;
+}
+
+@media screen and (min-width: 575px){
+    .carousel-inner.movie{
+        display: flex;
+    }
+
+    .carousel-item.movie{
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3.4);
+    }
+}
+
+.carousel-inner.movie{
+    padding: 1em;
+}
+
+.card{
+    width: 18rem;
+    margin: 0 .5em;
+    box-shadow: 2px 6px 8px 0 rgba(8, 79, 212, 0.18);
+    border: none;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card .img-wrapper {
+    max-width: 100%;
+    height: 22em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .movie-img{
+    max-height: 100%;
+  }
