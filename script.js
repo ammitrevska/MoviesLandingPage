@@ -292,6 +292,10 @@ $(document).ready(function () {
   $("#addMovieBtn").on("click", function () {
     $("#addMovieModal").modal("show");
   });
+
+  $("#addMovieModal .close, #addMovieModal .btn-secondary").on("click", function () {
+    $("#addMovieModal").modal("hide");
+  });
 });
 
 // Function for getting random quote
