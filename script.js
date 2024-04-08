@@ -30,7 +30,7 @@ $(document).ready(function () {
 
   function getMoviesByGenre(genre) {
     $.ajax({
-      url: "http://omdbapi.com/?s=" + genre + "&apikey=" + apikey + "&type=movie",
+      url: "https://omdbapi.com/?s=" + genre + "&apikey=" + apikey + "&type=movie",
       dataType: "json",
       success: function (data) {
         if (data.Response == "True") {
@@ -97,7 +97,7 @@ $(document).ready(function () {
   function getMoviesByTitle(title) {
     var apikey = "ab7b1b1b";
     $.ajax({
-      url: "http://omdbapi.com/?t=" + title + "&apikey=" + apikey + "&plot=short",
+      url: "https://omdbapi.com/?t=" + title + "&apikey=" + apikey + "&plot=short",
       dataType: "json",
       success: function (data) {
         if (data.Response == "True") {
@@ -189,7 +189,7 @@ $(document).ready(function () {
 
     return new Promise(function (resolve, reject) {
       $.ajax({
-        url: "http://omdbapi.com/?t=" + title + "&apikey=" + apikey + "&plot=short",
+        url: "https://omdbapi.com/?t=" + title + "&apikey=" + apikey + "&plot=short",
         dataType: "json",
         success: function (data) {
           console.log("Success response for title: " + title, data);
