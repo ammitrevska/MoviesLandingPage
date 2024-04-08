@@ -139,10 +139,10 @@ $(document).ready(function () {
     { title: "Oppenheimer", imgUrl: "assets/1323605.jpeg" }
   ];
 
- 
+
   // Function to populate the most watched carousel
   async function populateMostWatchedCarousel() {
-    var carouselInner = $(".hero .carousel-inner"); 
+    var carouselInner = $(".hero .carousel-inner");
     carouselInner.empty();
 
     try {
@@ -244,7 +244,7 @@ $(document).ready(function () {
 
 
   $('#addMovieForm').submit(function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     var title = $('#movieTitle').val();
     var releaseDate = $('#releaseDate').val();
@@ -273,11 +273,11 @@ $(document).ready(function () {
           </div>
       `;
 
-    $('#addedMoviesCarousel .carousel-inner').append(movieCardHtml);
+      $('#addedMoviesCarousel .carousel-inner').append(movieCardHtml);
     }
 
     $('#addedMoviesSection').show();
-    
+
     $('#addMovieModal').modal('hide');
 
     $('#movieTitle').val('');
@@ -294,5 +294,25 @@ $(document).ready(function () {
   });
 });
 
+// Function for getting random quote
+function getQuote() {
+  $.ajax({
+    url: 'https://api.quotable.io/random',
+    type: "GET",
+    success: function (data) {
+      console.log(data);
+      const { content, author } = data;
+      $('#quote').html(`"${content}" - ${author}`);
+    },
+    error: function (xhr, status, error) {
+      console.error('Error fetching quote:', error);
+    }
+
+  });
+}
+
+$(document).ready(function () {
+  getQuote();
+});
 
 
