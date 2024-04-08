@@ -58,12 +58,12 @@
                     </ul>
                   </li>
                   <li class="nav-item ">
-                    <a class="nav-link text-light" href="#">My favorites</a>
+                    <a class="nav-link text-light" href="#">About</a>
                   </li>
                 </ul>
               </div>
               <div>
-                <button type="button" class="btn" id="add"><i class="bi bi-plus-lg m-2"></i>Add a movie</button>
+                <button type="button" class="btn text-light" id="addMovieBtn"><i class="bi bi-plus-lg m-2"></i>Add a movie</button>
               </div>
             </div>
           </nav>
@@ -85,7 +85,6 @@
          <div class="container text-light my-5" id="sci-fi-section">
             <h2>Sci-fi Movies</h2>
             
-            <!-- Updated HTML -->
             <div id="carouselExampleControls" class="carousel" >
               <div class="carousel-inner movie">
                 
@@ -173,6 +172,16 @@
             </div>
           </div>
 
+          <!-- Section for added movies -->
+          <section id="addedMoviesSection" class="container text-light my-5">
+            <h2>Added Movies</h2>
+            <div class="carousel" id="addedMoviesCarousel">
+                <div class="carousel-inner added-movie d-flex">
+                </div>
+            </div>
+          </section>
+
+
           <!-- Modal -->
           <div class="modal fade" id="plotModal" tabindex="-1" aria-labelledby="plotModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
@@ -197,7 +206,40 @@
               </div>
             </div>
           </div>
-          
+
+          <!--Modal for adding a movie-->
+            <div class="modal fade" id="addMovieModal" tabindex="-1" role="dialog" aria-labelledby="addMovieModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="addMovieModalLabel">Add Movie</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="addMovieForm">
+                      <div class="form-group">
+                        <label for="movieTitle">Movie Title</label>
+                        <input type="text" class="form-control" id="movieTitle" maxlength="250" placeholder="Enter movie title" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="releaseDate">Release Date</label>
+                        <input type="text" class="form-control" id="releaseDate" placeholder="Enter release date (YYYY-MM-DD)" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea class="form-control" id="description" maxlength="500" placeholder="Enter movie description" required></textarea>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" form="addMovieForm" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           
 
         </section>

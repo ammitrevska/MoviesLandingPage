@@ -21,8 +21,12 @@ img {
     max-width: 50%;
 }
 
-.btn{
-    color: white;
+.carousel-item.added-movie{
+    flex: 0 0 calc(100%/3.4);
+}
+
+#addedMoviesSection {
+    display: none;
 }
 
 .text-muted{
