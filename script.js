@@ -58,7 +58,7 @@ $(document).ready(function () {
         var movieHtml = `
             <div class="carousel-item movie">
               <div class="card bg-dark">
-                <div class="img-wrapper">
+                <div class="img-wrapper d-flex justify-content-center align-items-center">
                   <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'placeholder.jpg'}" class="d-block w-100 movie-img" alt="${movie.Title}">
                 </div>
                 <div class="card-body text-center">
@@ -122,7 +122,6 @@ $(document).ready(function () {
     $('#plotModal').modal('show');
   }
 
-  // Attach click event listener to a static parent element
   $(".carousel").on("click", ".carousel-item.movie", function () {
     var movieTitle = $(this).find(".card-title").text();
     getMoviesByTitle(movieTitle);
@@ -143,7 +142,7 @@ $(document).ready(function () {
  
   // Function to populate the most watched carousel
   async function populateMostWatchedCarousel() {
-    var carouselInner = $(".hero .carousel-inner"); // Change this selector to target the main carousel
+    var carouselInner = $(".hero .carousel-inner"); 
     carouselInner.empty();
 
     try {
@@ -215,6 +214,7 @@ $(document).ready(function () {
 // Open the modal to add a movie
 $(document).ready(function () {
 
+  // Function to validate Title
   function validateTitle(title) {
     if (title.trim() === "") {
       alert('Please enter a title.');
@@ -244,27 +244,23 @@ $(document).ready(function () {
 
 
   $('#addMovieForm').submit(function (event) {
-    event.preventDefault(); // Prevent the default form submission
+    event.preventDefault(); 
 
-    // Get input values
     var title = $('#movieTitle').val();
     var releaseDate = $('#releaseDate').val();
     var description = $('#description').val();
 
-    // Validate inputs
     if (!validateTitle(title) || !validateDate(releaseDate) || !validateDescription(description)) {
-      return; // Exit if any validation fails
+      return;
     }
 
     var existingMovie = $(`#addedMoviesCarousel .carousel-inner .added-movie[data-title="${title}"]`);
 
 
     if (existingMovie.length > 0) {
-      // Update the existing movie card content
       existingMovie.find('.release-date').text(`Release Date: ${releaseDate}`);
       existingMovie.find('.description').text(`Description: ${description}`);
     } else {
-      // Create movie card HTML
       var movieCardHtml = `
           <div class="carousel-item added-movie d-flex align-items-stretch me-0" data-title="${title}">
               <div class="card bg-dark mb-5 mt-3">
@@ -277,31 +273,23 @@ $(document).ready(function () {
           </div>
       `;
 
-    // Append the movie card HTML to the added movies section
     $('#addedMoviesCarousel .carousel-inner').append(movieCardHtml);
     }
 
-    $('#addedMoviesSection').show(); // Show the section
-
-    // Close the modal after adding the movie
+    $('#addedMoviesSection').show();
+    
     $('#addMovieModal').modal('hide');
 
-    // Clear form fields for next use
     $('#movieTitle').val('');
     $('#releaseDate').val('');
     $('#description').val('');
   });
 
-
 });
-
-
 
 $(document).ready(function () {
 
-  // Add click event listener to the add movie button
   $("#addMovieBtn").on("click", function () {
-    // Open the add movie modal
     $("#addMovieModal").modal("show");
   });
 });
