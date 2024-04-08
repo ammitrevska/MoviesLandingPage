@@ -1,249 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 
-    <title>Movies Landing Page </title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+    integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+
+  <title>Movies Landing Page </title>
 </head>
+
 <body>
 
-    <!-- hero section -->
+  <!-- hero section -->
 
-    <section class="hero">
-    
-      <!--Carousel-->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-          </div>
-          <div class="carousel-inner text-light">
-          </div>
+  <section class="hero">
+
+    <!--Carousel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+          aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+          aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner text-light">
+      </div>
+    </div>
+
+    <!--Nav bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark position-fixed top-0 start-0 end-0">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-3 text-light" href="#">iMovies</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav d-flex gap-5">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#sci-fi-section" id="sci-fi">Sci-fi</a></li>
+                <li><a class="dropdown-item" href="#action-section" id="action">Action</a></li>
+                <li><a class="dropdown-item" href="#comedy-section" id="comedy">Comedy</a></li>
+                <li><a class="dropdown-item" href="#fantasy-section" id="fantasy">Fantasy</a></li>
+                <li><a class="dropdown-item" href="#thriller-section" id="thriller">Thriller</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light" href="#">About</a>
+            </li>
+          </ul>
         </div>
-      
-        <!--Nav bar-->
-        <nav class="navbar navbar-expand-lg navbar-dark position-fixed top-0 start-0 end-0">
-            <div class="container-fluid">
-              <a class="navbar-brand ms-3 text-light" href="#" >iMovies</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav d-flex gap-5">
-                  <li class="nav-item">
-                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categories
-                      </a>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#sci-fi-section" id="sci-fi">Sci-fi</a></li>
-                      <li><a class="dropdown-item" href="#action-section" id="action">Action</a></li>
-                      <li><a class="dropdown-item" href="#comedy-section" id="comedy">Comedy</a></li>
-                      <li><a class="dropdown-item" href="#fantasy-section" id="fantasy">Fantasy</a></li>
-                      <li><a class="dropdown-item" href="#thriller-section" id="thriller">Thriller</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item ">
-                    <a class="nav-link text-light" href="#">About</a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <button type="button" class="btn text-light" id="addMovieBtn"><i class="bi bi-plus-lg m-2"></i>Add a movie</button>
-              </div>
-            </div>
-          </nav>
+        <div>
+          <button type="button" class="btn text-light" id="addMovieBtn"><i class="bi bi-plus-lg m-2"></i>Add a
+            movie</button>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+  <!--body-->
+  <section class="bg-dark">
+
+    <!-- quote -->
+    <div class="container">
+      <p id="quote" class="d-flex justify-content-center align-items-center text-light py-4 m-0">
+
+      </p>
+    </div>
+
+  </section>
+  <!-- movies -->
+  <section class="bg-gradient">
+    <div class="container text-light mb-5 pt-3" id="sci-fi-section">
+      <h2>Sci-fi Movies</h2>
+
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner movie">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container text-light my-5" id='action-section'>
+      <h2>Action Movies</h2>
+
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner movie">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+    <div class="container text-light my-5" id='comedy-section'>
+      <h2>Comedy Movies</h2>
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner movie">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="container text-light my-5" id='fantasy-section'>
+      <h2>Fantasy Movies</h2>
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner movie">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container text-light my-5" id='thriller-section'>
+      <h2>Thriller Movies</h2>
+      <div id="carouselExampleControls" class="carousel">
+        <div class="carousel-inner movie">
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section for added movies -->
+    <section id="addedMoviesSection" class="container text-light my-5">
+      <h2>Added Movies</h2>
+      <div class="carousel" id="addedMoviesCarousel">
+        <div class="carousel-inner added-movie d-flex">
+
+        </div>
+      </div>
+
+
     </section>
-    
 
-     <!--body-->
-      <section class="bg-dark">
 
-        <!-- quote -->
-        <div class="container">
-          <p id="quote" class="d-flex justify-content-center align-items-center text-light py-4 ">
-              
-          </p>
+  </section>
+  <!-- Modal -->
+  <div class="modal fade" id="plotModal" tabindex="-1" aria-labelledby="plotModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <img src="" class="img-fluid rounded-start" id="plotModalPoster" alt="Movie Poster">
+              </div>
+              <div class="col-md-6">
+                <h5 class="modal-title" id="plotModalLabel">Movie Title</h5>
+                <div class="my-2">
+                  <span class="card-text fst-italic" id="date"><small class="text-muted">Year</small></span> |
+                  <span class="card-text fst-italic" id="genre"><small class="text-muted ">Genre</small></span>
+                </div>
+                <p class="card-text" id="plotModalPlot">Movie Plot</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <!-- movies -->
-        <section>
-         <div class="container text-light my-5" id="sci-fi-section">
-            <h2>Sci-fi Movies</h2>
-            
-            <div id="carouselExampleControls" class="carousel" >
-              <div class="carousel-inner movie">
-                
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+  <!--Modal for adding a movie-->
+  <div class="modal fade" id="addMovieModal" tabindex="-1" role="dialog" aria-labelledby="addMovieModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addMovieModalLabel">Add Movie</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="addMovieForm">
+            <div class="form-group">
+              <label for="movieTitle">Movie Title</label>
+              <input type="text" class="form-control" id="movieTitle" maxlength="250" placeholder="Enter movie title"
+                required>
             </div>
-         </div> 
-
-         <div class="container text-light my-5" id='action-section'>
-          <h2>Action Movies</h2>
-          
-          <div id="carouselExampleControls" class="carousel" >
-            <div class="carousel-inner movie">
-              
+            <div class="form-group">
+              <label for="releaseDate">Release Date</label>
+              <input type="text" class="form-control" id="releaseDate" placeholder="Enter release date (YYYY-MM-DD)"
+                required>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-         </div>
-          <div class="container text-light my-5" id='comedy-section'>
-            <h2>Comedy Movies</h2>
-            <div id="carouselExampleControls" class="carousel" >
-              <div class="carousel-inner movie">
-
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" id="description" maxlength="500" placeholder="Enter movie description"
+                required></textarea>
             </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" form="addMovieForm" class="btn btn-primary">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          </div>
-
-          <div class="container text-light my-5" id='fantasy-section'>
-            <h2>Fantasy Movies</h2>
-            <div id="carouselExampleControls" class="carousel" >
-              <div class="carousel-inner movie">
-
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="container text-light my-5" id='thriller-section'>
-            <h2>Thriller Movies</h2>
-            <div id="carouselExampleControls" class="carousel" >
-              <div class="carousel-inner movie">
-
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Section for added movies -->
-          <section id="addedMoviesSection" class="container text-light my-5">
-            <h2>Added Movies</h2>
-            <div class="carousel" id="addedMoviesCarousel">
-                <div class="carousel-inner added-movie d-flex">
-                
-                </div>
-            </div>
-
-
-          </section>
-
-
-          <!-- Modal -->
-          <div class="modal fade" id="plotModal" tabindex="-1" aria-labelledby="plotModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-body">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <img src="" class="img-fluid rounded-start" id="plotModalPoster" alt="Movie Poster">
-                      </div>
-                      <div class="col-md-6">
-                        <h5 class="modal-title" id="plotModalLabel">Movie Title</h5>
-                        <div class="my-2">
-                          <span class="card-text fst-italic" id="date"><small class="text-muted">Year</small></span> |
-                          <span class="card-text fst-italic" id="genre"><small class="text-muted ">Genre</small></span>
-                        </div>
-                        <p class="card-text" id="plotModalPlot">Movie Plot</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--Modal for adding a movie-->
-            <div class="modal fade" id="addMovieModal" tabindex="-1" role="dialog" aria-labelledby="addMovieModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="addMovieModalLabel">Add Movie</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form id="addMovieForm">
-                      <div class="form-group">
-                        <label for="movieTitle">Movie Title</label>
-                        <input type="text" class="form-control" id="movieTitle" maxlength="250" placeholder="Enter movie title" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="releaseDate">Release Date</label>
-                        <input type="text" class="form-control" id="releaseDate" placeholder="Enter release date (YYYY-MM-DD)" required>
-                      </div>
-                      <div class="form-group">
-                        <label for="description">Description</label>
-                        <textarea class="form-control" id="description" maxlength="500" placeholder="Enter movie description" required></textarea>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" form="addMovieForm" class="btn btn-primary">Add</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-
-        </section>
-      </section>
 </body>
+
 </html>

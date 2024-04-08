@@ -9,6 +9,12 @@ body, html {
     height: 100%;
 }
 
+.bg-gradient {
+
+    background: linear-gradient(180deg, #020024 0%, #090979 35%, #00d4ff 100%) !important;
+}
+
+
 img {
     width: 100%;
     height: 100vh;
@@ -21,6 +27,16 @@ img {
 
 #addedMoviesSection {
     display: none;
+}
+
+h5, h2{
+    font-family: "Poppins", sans-serif;
+}
+
+#mostWatchedPlot, #quote{
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* Carousel styles */
@@ -39,12 +55,11 @@ img {
     padding: 10px;
     margin: 0 -30px;
     transform: translateY(-50%);
-    background-color: rgba(168, 160, 160, 0.5); /* Adjust the opacity as needed */
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background-color: rgba(168, 160, 160, 0.7); /* Adjust the opacity for hover effect */
+    background-color: rgba(168, 160, 160, 0.7); 
 }
 
 /* Carousel item styles */
@@ -76,7 +91,7 @@ img {
 .card {
     width: 18rem;
     margin: 0 .5em;
-    box-shadow: 2px 6px 8px 0 rgba(8, 79, 212, 0.18);
+    box-shadow: 2px 6px 8px 0 rgba(1, 7, 20, 0.30);
     border: none;
 }
 
